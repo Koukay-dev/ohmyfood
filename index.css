@@ -1,0 +1,50 @@
+
+ *{
+    padding: 0;
+	margin: 0;
+ }
+
+
+ li{
+	list-style-type: none;
+}
+
+
+ a
+ {
+ 	text-decoration: none;
+ 	color:black;	
+ }
+
+
+ a , img {
+    box-sizing: border-box;
+    width:100%;
+ }
+
+/********************************** Header *****************************/
+
+/******************************** Toutes Sections ********************************/
+
+section , footer {
+    padding-inline:  20px;
+    padding-block: 30px;
+}
+
+
+/***************************** Section principale ***********************************/
+
+
+.case_restaurant {
+    border: red solid 1px;
+    height: 350px;
+}
+
+
+
+
+img{
+
+    object-fit: cover;
+
+}
