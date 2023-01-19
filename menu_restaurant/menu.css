@@ -1,0 +1,317 @@
+
+
+*{
+    padding: 0;
+	margin: 0;
+    font-family: 'Roboto', sans-serif;
+ }
+
+
+ li{
+	list-style-type: none;
+}
+
+
+ a
+ {
+ 	text-decoration: none;
+ 	color:black;	
+ }
+
+
+ img {
+    box-sizing: border-box;
+    width:100%;
+ }
+
+ h1, h2, h5{
+    font-family: 'Shrikhand','Roboto' ,sans-serif;
+    font-weight: 500;
+}
+
+/* ================================ HEADER =================================*/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    
+}
+
+
+
+header a{
+    position: absolute;
+    left: 25px;
+    padding: 10px;
+    font-size: 23px;
+}
+
+
+
+/* ======================= SECTION PRINCIPALE ==============================*/
+section {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+h2 {
+    margin-inline: 25px;
+}
+
+#titre_et_image_restaurant {
+    position: relative;
+}
+
+
+h3{
+    margin-inline: 10px;
+    font-weight: 400;
+}
+
+.menu{
+    margin-bottom: 25px;
+}
+
+.underlined{
+    text-decoration: underline;
+    text-decoration-color: #99E2D0;
+    text-decoration-thickness: 3px;
+    text-underline-offset : 7px;
+}
+
+#nom_restaurant{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding-block: 20px;
+}
+
+
+.heart-icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-inline: 30px;
+    font-size: 25px;
+    /*background-image: linear-gradient(176deg, #9356DC ,#FF79DA);
+    transition: background-image 500ms ease-in-out;*/
+}
+
+/*.heart-icon:hover {
+    background-image: linear-gradient(356deg, #9356DC ,#FF79DA) ;
+    overflow: hidden;
+}*/
+
+
+
+h4 {
+    font-size: 18px;
+}
+
+
+
+.menu ul li {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.15);
+    background-color: white;
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 200ms;
+
+}
+
+
+/* animation apparition menu*/
+h3{
+    animation: apparition-menu 900ms cubic-bezier(0.26, 0.1, 0, 1);
+
+}
+
+.menu ul li:nth-child(1){
+    animation: apparition-menu 1200ms 33ms cubic-bezier(0.26, 0.1, 0, 1);
+}
+.menu ul li:nth-child(2){
+    animation: apparition-menu 1200ms 66ms cubic-bezier(0.26, 0.1, 0, 1);
+}
+.menu ul li:nth-child(3){
+    animation: apparition-menu 1200ms 100ms cubic-bezier(0.26, 0.1, 0, 1);
+}
+
+@keyframes apparition-menu {
+    0%{
+        opacity: 0;
+        transform :translateY(30px);
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform :translateY(0px);
+    }
+}
+
+
+/* animation apparition menu*/
+
+
+
+.info_plat{
+    width: 100%;
+    padding: 12px;
+}
+
+.description_plat_prix{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    transition: width 500ms ease-out;
+}
+
+
+.description_plat_prix p:not(.prix){
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.prix{
+    font-weight: 600;
+    padding-left: 5px;    
+}
+
+.validation_plat{
+    position: absolute;
+    background-color : #99E2D0;
+    height: 100%;
+    width: 60px;
+    right: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.5s ease-out;
+}
+
+.fa-circle-check{
+    color:white;
+    flex: 0 0 auto;
+    font-size: 25px;
+    rotate: 180deg;
+    transition: transform 0.3s 150ms ease-in-out;
+
+}
+
+/* animation de validation d'un plat*/
+
+.menu ul li:hover{
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 60%) !important;
+}
+
+.info_plat:hover + .validation_plat{
+    right : 0px;
+    
+}
+
+.info_plat:hover + .validation_plat .fa-circle-check{
+    transform: rotate(180deg);
+}
+
+.info_plat:hover .description_plat_prix{
+    width: calc(100% - 60px);
+}
+
+
+/* pour que ce soit plus agreable à l'utilisation*/
+/*
+.validation_plat:hover{
+    right : 0px;
+    
+}
+
+.validation_plat:hover + .fa-circle-check{
+    transform: rotate(180deg);
+}
+
+.validation_plat:hover + .info_plat .description_plat_prix{
+    width: calc(100% - 60px);
+}*/
+
+/* animation de validation d'un plat*/
+
+
+#bouton_commander {
+    align-self: center;
+    font-size: 15px;
+    width: fit-content;
+    margin-bottom: 35px;
+    padding: 15px;
+    padding-inline: 45px;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 25%);
+    background: linear-gradient(176deg, #FF79DA, #9356DC);
+    transition: transform cubic-bezier(.17,.76,.18,.94) 1s;
+    
+}
+
+#bouton_commander:hover {
+    transform: scale(1.20) ;
+    background: linear-gradient(176deg, #9356DC ,#FF79DA);
+}
+
+
+/* ============================ FOOTER ===================================== */
+
+
+footer {
+    background-color: #222222;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer * {
+    color: #ebebeb;
+}
+
+
+h5 {
+    font-size: 20px;
+}
+
+#logo_footer {
+    color: #ebebeb;
+    height: 20px;
+    margin-block: 10px;
+
+}
+
+#liste_footer li{
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#liste_footer li i {
+    padding-right: 3px;
+    width: 32px;
+}
