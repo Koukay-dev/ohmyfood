@@ -25,13 +25,18 @@
     width:100%;
  }
 
-body {
-}
 
 
 
 
  /* ----------------------------animation page onload-----------------------------*/
+#onLoadParent{
+    overflow: hidden;
+    position: absolute;
+    height: calc(100%);
+    width: 100%;
+    opacity: 0;
+}
 
 #onload{
     position: absolute;
