@@ -42,7 +42,7 @@ li:hover:not(#liste_footer li){
     position: absolute;
     height: calc(100%*2.4);
     width: 100%;
-    scale: 0;
+    transform : scale(0);
     animation: apparition 3s;
     z-index: 3;
 }
@@ -65,10 +65,10 @@ li:hover:not(#liste_footer li){
 }
 @keyframes apparition {
     from{
-        scale: 1;
+        transform : scale(1);
     }
     to{
-        scale : 1;
+        transform : scale(1);
     }
 }
 
